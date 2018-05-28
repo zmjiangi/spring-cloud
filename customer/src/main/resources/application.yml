@@ -1,0 +1,15 @@
+server:
+  port: 8081 # 服务端口
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9081/eureka/ ## http://172.20.100.217:9081/eureka/,http://172.20.100.218:9081/eureka/,http://172.20.100.219:9081/eureka/ # 服务注册中心地址
+
+spring:
+  application:
+    name: customer-service # 服务名称
+
+feign:
+  hystrix:
+    enabled: true

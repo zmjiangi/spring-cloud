@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 9081
+eureka:
+  instance:
+    ipAddress: 127.0.0.1
+    preferIpAddress: true
+  server:
+    #出现大量服务失效时，不保存()
+    #enableSelfPreservation: false
+    #检查清理无效节点的间隔
+    eviction-interval-timer-in-ms: 30000
+  client:
+    fetch-registry: false
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9081/eureka/
