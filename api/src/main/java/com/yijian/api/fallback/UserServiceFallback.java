@@ -18,13 +18,18 @@ public class UserServiceFallback implements UserService {
     }
 
     @Override
-    public User getUser(@RequestParam("name") String name, @RequestParam("password") String password) {
+    public User get(@RequestParam("name") String name, @RequestParam("password") String password) {
         return new User("0", "0");
     }
 
     @Override
     public User getByPost(@RequestBody User user) {
         return new User("0", "0");
+    }
+
+    @Override
+    public void exception() {
+
     }
 
 }

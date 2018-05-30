@@ -14,9 +14,12 @@ public interface UserService {
     String getName(@RequestParam("name") String name);
 
     @GetMapping(value = "/svc/user/get")
-    User getUser(@RequestParam("name") String name, @RequestParam("password") String password);
+    User get(@RequestParam("name") String name, @RequestParam("password") String password);
 
     @PostMapping(value = "/svc/user/post")
     User getByPost(@RequestBody User user);
+
+    @PostMapping(value = "/svc/user/exception")
+    void exception();
 
 }
